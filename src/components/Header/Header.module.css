@@ -53,6 +53,12 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  transition: color 0.3s ease;
+}
+
+/* Letras brancas quando header transparente */
+.header:not(.scrolled) .navDesktop a {
+  color: var(--color-white);
 }
 
 /* Efeito de sublinhado no hover */
@@ -72,61 +78,18 @@
   width: 100%;
 }
 
-/* --- Dropdown Menu (CSS Puro) --- */
-.dropdown {
-  position: relative;
-}
-
-.dropdownMenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--color-dark);
-  border-radius: 5px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 0;
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-  /* Animação com CSS */
-  opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none; /* Impede interação quando escondido */
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Mostra o menu quando o mouse está sobre o elemento .dropdown */
-.dropdown:hover .dropdownMenu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto; /* Permite interação quando visível */
-}
-
-.dropdownMenu a {
-  color: var(--color-dark);
-  padding: 0.8rem 1.5rem;
-  text-transform: none;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-.dropdownMenu a:hover {
-  background-color: var(--color-light-gray);
-  color: var(--color-primary);
-}
-
-/* Remove o sublinhado do hover dos itens do dropdown */
-.dropdownMenu a::after {
-  display: none;
-}
-
 /* --- Menu Mobile --- */
 .menuIcon {
   display: none; /* Escondido por padrão no desktop */
   cursor: pointer;
   z-index: 101; /* Fica acima do menu mobile */
-  color: red;
+  color: var(--color-dark);
   transition: color 0.3s ease;
+}
+
+/* Menu icon branco quando header transparente */
+.header:not(.scrolled) .menuIcon {
+  color: var(--color-white);
 }
 
 .menuIcon:hover {

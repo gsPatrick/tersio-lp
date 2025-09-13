@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.css';
-import { FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -47,18 +47,7 @@ const Header = () => {
         <nav className={styles.navDesktop}>
           <Link href="/">Início</Link>
           <Link href="/#sobre">Sobre</Link>
-          <div className={styles.dropdown}>
-            <Link href="/#atuacao" className={styles.dropdownToggle}>
-              Áreas de Atuação <FiChevronDown />
-            </Link>
-            <div className={styles.dropdownMenu}>
-              <Link href="/#atuacao-familia">Direito de Família</Link>
-              <Link href="/#atuacao-previdenciario">Previdenciário</Link>
-              <Link href="/#atuacao-bancario">Bancário</Link>
-              <Link href="/#atuacao-consumidor">Consumidor</Link>
-              <Link href="/#atuacao-trabalhista">Trabalhista</Link>
-            </div>
-          </div>
+          <Link href="/#atuacao">Áreas de Atuação</Link>
           <Link href="/#equipe">Equipe</Link>
           <Link href="/#contato">Contato</Link>
         </nav>
