@@ -1,0 +1,128 @@
+.practiceSection {
+  /* Fundo principal da seção agora é vinho */
+  background-color: var(--color-primary);
+  color: var(--color-white); /* Cor padrão do texto na seção */
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Opcional: Adiciona um padrão sutil ao fundo para mais textura */
+.practiceSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px);
+    background-size: 4rem 4rem;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+/* Garante que o conteúdo fique acima do pseudo-elemento de fundo */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.preTitle {
+  /* Pré-título branco, mas com leve transparência para hierarquia */
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  /* Título principal branco e sólido */
+  color: var(--color-white);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  /* Subtítulo branco com leve transparência */
+  color: rgba(245, 245, 245, 0.9);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  /* Fundo do card mais escuro e semi-transparente para criar profundidade */
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borda branca sutil */
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(4px); /* Efeito de vidro fosco */
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(0, 0, 0, 0.3); /* Fica um pouco mais escuro no hover */
+  border-color: var(--color-white); /* Borda fica sólida */
+}
+
+.iconWrapper {
+  font-size: 3rem;
+  /* Ícone branco */
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .iconWrapper {
+  transform: scale(1.1);
+}
+
+.cardTitle {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  /* Título do card branco */
+  color: var(--color-white);
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  /* Descrição do card com leve transparência para não competir com o título */
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  .practiceSection {
+    padding: 4rem 0;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .grid {
+    gap: 1.5rem;
+  }
+}

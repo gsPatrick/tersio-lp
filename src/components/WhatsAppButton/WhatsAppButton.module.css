@@ -1,0 +1,48 @@
+/* Animação de pulso para chamar a atenção */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.whatsappButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+  
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  
+  background-color: #25D366; /* Cor oficial do WhatsApp */
+  color: white;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  
+  /* Aplica a animação */
+  animation: pulse 2.5s infinite ease-in-out;
+  
+  transition: all 0.3s ease;
+}
+
+.whatsappButton:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  /* Pausa a animação de pulso no hover para não conflitar */
+  animation-play-state: paused;
+}
