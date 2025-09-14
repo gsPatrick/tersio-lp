@@ -36,8 +36,8 @@ const Header = () => {
             <Image
               src="/logo.png" // Usando o nome correto do logo
               alt="Tersio IDBAS Advogados Associados Logo"
-              width={100}
-              height={35}
+              width={120}
+              height={45}
               priority
             />
           </Link>

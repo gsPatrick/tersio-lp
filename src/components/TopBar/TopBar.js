@@ -14,9 +14,6 @@ const TopBar = () => {
     <div className={styles.topBar}>
       <div className={`${styles.container} container`}>
         <div className={styles.contactInfo}>
-          <a href={`tel:${phone}`}>
-            <FaPhone /> <span>{phone}</span>
-          </a>
           <a href={`mailto:${email}`}>
             <FaEnvelope /> <span>{email}</span>
           </a>
