@@ -7,24 +7,25 @@ const mainLawyers = [
     image: '/team-tersio.png',
     name: 'Tersio Idbas Moraes Silva',
     role: 'Sócio Fundador',
-    oab: 'OAB/SP 123.456',
+    oab: 'OAB/SP 318.211 e OAB/MS 30.035-A', // OAB CORRIGIDA
   },
   {
     image: '/advogada1.png',
     name: 'Ana R. J. M. Porto de Almeida',
     role: 'Advogada Associada',
-    oab: 'OAB/SP 789.012',
+    oab: 'OAB/SP 512.867', // OAB CORRIGIDA
   },
 ];
 
+// ORDEM DA EQUIPE DE APOIO INVERTIDA
 const supportTeam = [
-  {
-    name: 'Talíria Martins Menezes',
-    role: 'Assistente Jurídica',
-  },
   {
     name: 'Carolina Marques Gomes',
     role: 'Estagiária / Recepção',
+  },
+  {
+    name: 'Talíria Martins Menezes',
+    role: 'Assistente Jurídica',
   },
 ];
 
